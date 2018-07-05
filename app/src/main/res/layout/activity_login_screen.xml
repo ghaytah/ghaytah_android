@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
     tools:context=".Login_screen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/imgView_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/G_logo"
+            />
+        <RelativeLayout
+            android:id="@+id/rellay1"
+            android:layout_below="@+id/imgView_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/log_in"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_login"
+                android:orientation="vertical"
+                >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif"
+                       android:textColor="@color/white"
+                       android:textAllCaps="true"
+                       android:textSize="15sp"
+                       android:text="@string/email_address"
+                       android:layout_marginTop="20dp"
+                       />
+
+                   <EditText
+                       android:id="@+id/editText1"
+                       android:layout_width="match_parent"
+                       android:layout_height="40dp"
+                       android:textSize="15sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="sans-serif-light"
+                       android:paddingLeft="15dp"
+                       android:paddingRight="15dp"
+                       android:inputType="textEmailAddress" />
+               </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
