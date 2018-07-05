@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "166435017669",
+    "firebase_url": "https://ghaytah-91eb2.firebaseio.com",
+    "project_id": "ghaytah-91eb2",
+    "storage_bucket": "ghaytah-91eb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166435017669:android:a627b97ab8eceb12",
+        "android_client_info": {
+          "package_name": "com.ghaytah.ghaytah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166435017669-h0660idfada3ip34u0q6bqjig719o09n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ghaytah.ghaytah",
+            "certificate_hash": "32b3b0767643fdabef61d4bab4830a2f5a807332"
+          }
+        },
+        {
+          "client_id": "166435017669-goh714n1futgr8eigi5fmt0hb34e7c1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB_hwFosnizUHaCmGFbB37rT45t4ZBpOM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166435017669-goh714n1futgr8eigi5fmt0hb34e7c1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
