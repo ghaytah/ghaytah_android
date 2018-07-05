@@ -17,7 +17,7 @@
             android:layout_height="80dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/G_logo"
+            android:src="@drawable/g_logo"
             />
         <RelativeLayout
             android:id="@+id/rellay1"
@@ -29,6 +29,7 @@
                 android:id="@+id/tv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/log_in"
@@ -38,12 +39,15 @@
                 />
 
             <LinearLayout
+                android:id="@+id/linaly1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_login"
                 android:orientation="vertical"
                 >
-               <LinearLayout
+
+
+                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="vertical">
@@ -68,9 +72,51 @@
                        android:fontFamily="sans-serif-light"
                        android:paddingLeft="15dp"
                        android:paddingRight="15dp"
-                       android:inputType="textEmailAddress" />
+                       android:inputType="textEmailAddress"
+                       android:hint="@string/email_subject_hint"/>
                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"
+                        android:textSize="15sp"
+                        android:text="@string/password"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:inputType="textPassword"
+                        android:hint="@string/password_subject_hint"
+                        />
+                </LinearLayout>
             </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/linaly1"
+                android:layout_margin="16dp"
+                android:src="@drawable/chevron_right_button"
+                app:backgroundTint="@color/primaryLightColor" />
 
         </RelativeLayout>
 

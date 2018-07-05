@@ -2,4 +2,7 @@
     <string name="app_name">Ghaytah</string>
     <string name="log_in">Log In</string>
     <string name="email_address">Email Address</string>
+    <string name="email_subject_hint">Your Email</string>
+    <string name="password_subject_hint">Your Password</string>
+    <string name="password">Password</string>
 </resources>
