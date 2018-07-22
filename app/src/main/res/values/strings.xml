@@ -5,4 +5,7 @@
     <string name="email_subject_hint">Your Email</string>
     <string name="password_subject_hint">Your Password</string>
     <string name="password">Password</string>
+    <string name="welcome_title">Welcome to Ghaytah.</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
 </resources>

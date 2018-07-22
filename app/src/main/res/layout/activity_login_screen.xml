@@ -8,9 +8,13 @@
     tools:context=".Login_screen">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true">
+        android:id="@+id/main_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
         <ImageView
             android:id="@+id/imgView_logo"
             android:layout_width="80dp"
@@ -19,6 +23,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/g_logo"
             />
+
         <RelativeLayout
             android:id="@+id/rellay1"
             android:layout_below="@+id/imgView_logo"
@@ -105,21 +110,41 @@
                         android:hint="@string/password_subject_hint"
                         />
                 </LinearLayout>
-            </LinearLayout>
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab"
+            </LinearLayout>
+            <Button
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/linaly1"
-                android:layout_margin="16dp"
-                android:src="@drawable/chevron_right_button"
-                app:backgroundTint="@color/primaryLightColor" />
-
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingRight="70dp"
+                android:paddingLeft="70dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:text="@string/login" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:paddingRight="70dp"
+                android:paddingLeft="70dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:text="@string/create_account" />
         </RelativeLayout>
 
+
     </RelativeLayout>
+
+
 
 </RelativeLayout>
