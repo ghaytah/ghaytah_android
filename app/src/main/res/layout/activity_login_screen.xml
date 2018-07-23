@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@drawable/grad_bg"
-    tools:context=".Login_screen">
+    tools:context="com.ghaytah.ghaytah.Login_screen">
 
     <RelativeLayout
-        android:id="@+id/main_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -43,7 +41,7 @@
             android:id="@+id/rellay1"
             android:layout_below="@+id/imgView_logo"
             android:layout_width="wrap_content"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_height="wrap_content">
 
             <TextView
@@ -130,7 +128,7 @@
 
             </LinearLayout>
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_lgn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linaly1"
@@ -142,12 +140,14 @@
                 android:paddingLeft="70dp"
                 android:layout_centerHorizontal="true"
                 android:textSize="16sp"
-                android:text="@string/login" />
+                android:text="@string/login"
+                android:clickable="true"
+                android:focusable="true" />
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_cretacct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/button"
+                android:layout_below="@+id/btn_lgn"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_bg"
                 android:fontFamily="sans-serif-medium"
@@ -156,7 +156,9 @@
                 android:paddingLeft="70dp"
                 android:layout_centerHorizontal="true"
                 android:textSize="16sp"
-                android:text="@string/create_account" />
+                android:text="@string/create_account"
+                android:clickable="true"
+                android:focusable="true"/>
         </RelativeLayout>
 
 
@@ -168,6 +170,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone">
         <Button
+            android:id="@+id/btn_frgtpwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -177,7 +180,9 @@
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
+            android:clickable="true"
+            android:focusable="true"
 
             />
 
