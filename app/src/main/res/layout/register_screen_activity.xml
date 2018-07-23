@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/grad_bg"
-    tools:context="com.ghaytah.ghaytah.Login_screen">
+    tools:context="com.ghaytah.ghaytah.Register">
 
     <LinearLayout
         android:id="@+id/rellay3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:orientation="vertical"
         >
 
@@ -31,7 +31,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/register_email"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:fontFamily="sans-serif-light"
@@ -40,7 +40,9 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:imeOptions="actionNext"
+                android:maxLines="1"/>
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +61,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/register_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:fontFamily="sans-serif-light"
@@ -68,7 +70,9 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:imeOptions="actionNext"
+                android:maxLines="1"/>
         </LinearLayout>
 
         <LinearLayout
@@ -79,7 +83,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/surname"
                 android:textAllCaps="true"
@@ -87,7 +91,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/register_surname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:fontFamily="sans-serif-light"
@@ -99,33 +103,6 @@
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/create_a_password"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/editText4"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/password_subject_hint"
-                android:inputType="textPassword"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,7 +112,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/mobile_number"
                 android:textAllCaps="true"
@@ -143,7 +120,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/register_phone"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:fontFamily="sans-serif-light"
@@ -152,18 +129,84 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:imeOptions="actionNext"
+                android:maxLines="1"/>
         </LinearLayout>
 
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/create_a_password"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/password_subject_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:imeOptions="actionNext"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/confirm_password"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/password_subject_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/white"
+                android:imeActionId="@+id/register_form_finished"
+                android:imeActionLabel="@string/action_sign_up"
+                android:imeOptions="actionUnspecified"
+                android:textSize="15sp"
+                tools:ignore="InvalidImeActionId" />
+        </LinearLayout>
+
+
+    </LinearLayout>
     <Button
         android:id="@+id/btn_cretacct_now"
         android:layout_below="@+id/rellay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/btn_bg"
+        android:onClick="signUp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="sans-serif-medium"
@@ -173,5 +216,27 @@
         android:text="@string/create_account_now"
         android:textColor="@color/white"
         android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rellay4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_2_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:fontFamily="sans-serif"
+            android:text="@string/sign_in"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </RelativeLayout>
 
 </RelativeLayout>
