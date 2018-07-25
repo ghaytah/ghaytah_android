@@ -1,5 +1,6 @@
 package com.ghaytah.ghaytah;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +9,16 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.ghaytah.ghaytah.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,7 +61,11 @@ public class Register extends AppCompatActivity {
         // Keyboard sign in action
         mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+            public boolean onEditorAction(TextView v, int id, KeyEvent KeyEvent) {
+                if (id == R.id.register_form_finished || id == EditorInfo.IME_NULL) {
+                    attemptRegistration();
+                    return true;
+                }
                 return false;
             }
         });
@@ -149,14 +159,49 @@ public class Register extends AppCompatActivity {
                     Log.d("Ghaytah", "user creation failed");
                     showErrorDialog();
                 }else{
-                    
+                    saveUsers();
+
+                    Intent inetent = new Intent(Register.this, Login_screen.class);
+                    finish();
+                    startActivity(inetent);
+
                 }
 
             }
         });
     }
 
+    // TODO: Saving users details
+    private void saveUsers() {
+        //save user to db
+        User user = new User();
+        user.setEmail(mEmailView.getText().toString());
+        user.setFirstname(mNameView.getText().toString());
+        user.setSurname(mSurnameView.getText().toString());
+        user.setPassword(mPasswordView.getText().toString());
+        user.setPhone(mPhoneView.getText().toString());
 
+        //Use email to key
+
+        musers.child(user.getEmail())
+                .setValue(user)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        //TODO need to add success notification
+
+                        Toast.makeText(Register.this, "Registered Successfully !!!", Toast.LENGTH_SHORT).show();
+
+                    }
+                })
+        .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                showErrorDialog();
+            }
+        });
+
+     }
 
 
     // TODO: Create an alert dialog to show in case registration failed
@@ -170,6 +215,13 @@ public class Register extends AppCompatActivity {
                 .show();
     }
 
+    //Executed when sign in button is pressed
+    public void signIn(View view) {
 
+        Intent inetent = new Intent(Register.this, Login_screen.class);
+        finish();
+        startActivity(inetent);
+
+    }
 }
 

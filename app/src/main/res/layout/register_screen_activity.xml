@@ -221,21 +221,22 @@
         android:id="@+id/rellay4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/btn_2_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="sans-serif"
+            android:onClick="signIn"
             android:text="@string/sign_in"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:clickable="true"
-            android:focusable="true"
-            />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
