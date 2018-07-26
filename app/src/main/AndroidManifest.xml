@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher1_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login_screen">
+        <activity android:name=".Login_screen"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Forgot_Password"></activity>
+        <activity android:name=".Forgot_Password" />
+        <activity android:name=".MainSearchActivity"></activity>
     </application>
 
 </manifest>

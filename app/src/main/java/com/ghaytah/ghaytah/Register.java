@@ -183,7 +183,7 @@ public class Register extends AppCompatActivity {
 
         //Use email to key
 
-        musers.child(user.getEmail())
+        musers.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(user)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -214,14 +214,6 @@ public class Register extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
-
-    //Executed when sign in button is pressed
-    public void signIn(View view) {
-
-        Intent inetent = new Intent(Register.this, Login_screen.class);
-        finish();
-        startActivity(inetent);
-
-    }
+    
 }
 

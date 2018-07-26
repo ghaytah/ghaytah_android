@@ -35,13 +35,14 @@
             android:textStyle="bold"
             android:fontFamily="sans-serif"
             android:text="@string/welcome_title"
+            android:visibility="gone"
             />
 
         <RelativeLayout
             android:id="@+id/rellay1"
             android:layout_below="@+id/imgView_logo"
             android:layout_width="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_height="wrap_content">
 
             <TextView
@@ -93,7 +94,10 @@
                        android:paddingLeft="15dp"
                        android:paddingRight="15dp"
                        android:inputType="textEmailAddress"
-                       android:hint="@string/email_subject_hint"/>
+                       android:imeOptions="actionNext"
+                       android:hint="@string/email_subject_hint"
+                       android:maxLines="1"
+                       android:textIsSelectable="false"/>
                </LinearLayout>
 
                 <LinearLayout
@@ -123,42 +127,49 @@
                         android:paddingRight="15dp"
                         android:inputType="textPassword"
                         android:hint="@string/password_subject_hint"
-                        />
+                        android:maxLines="1"
+                        android:imeActionId="@+id/login"
+                        android:imeOptions="actionUnspecified"
+                        tools:ignore="InvalidImeActionId" />
                 </LinearLayout>
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/btn_lgn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linaly1"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/btn_bg"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/white"
-                android:paddingRight="70dp"
-                android:paddingLeft="70dp"
-                android:layout_centerHorizontal="true"
-                android:textSize="16sp"
-                android:text="@string/login"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="SignInExistingUser"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
             <Button
                 android:id="@+id/btn_cretacct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_lgn"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_bg"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/white"
-                android:paddingRight="70dp"
-                android:paddingLeft="70dp"
-                android:layout_centerHorizontal="true"
-                android:textSize="16sp"
-                android:text="@string/create_account"
                 android:clickable="true"
-                android:focusable="true"/>
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="registerNewUser"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
         </RelativeLayout>
 
 
@@ -168,23 +179,23 @@
         android:id="@+id/rellay2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible">
+        android:visibility="gone">
+
         <Button
             android:id="@+id/btn_frgtpwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="sans-serif"
+            android:onClick="ForgotPassword"
             android:text="@string/forgot_password"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15sp"
-            android:clickable="true"
-            android:focusable="true"
-
-            />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
