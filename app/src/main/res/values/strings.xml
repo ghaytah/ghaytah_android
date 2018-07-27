@@ -24,4 +24,12 @@
     <string name="error_invalid_password">Password too short or does not match</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_fav">Favourite</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="SearchTab">Search Tab</string>
+    <string name="profileTab">Profile Tab</string>
+    <string name="favoriteTab">Favourite Tab</string>
 </resources>
