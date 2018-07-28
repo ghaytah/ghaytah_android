@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -71,6 +72,23 @@ public class Login_screen extends AppCompatActivity {
         // TODO: Grab an instance
         mAuth = FirebaseAuth.getInstance();
         mHandler.postDelayed(mRunnable, 2000); // splash time
+    }
+
+    //Checking if user is signed in
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (currentUser != null){
+
+            Intent intent = new Intent(com.ghaytah.ghaytah.Login_screen.this, com.ghaytah.ghaytah.MainSearchActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
+
     }
 
     // TODO: Complete the attemptLogin() method
